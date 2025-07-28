@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang ="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New tab</title>
+        <!-- Links to scripts, the first one is for the clock, the second one is for the weather -->
+        <script src="script.js"></script>
+        <script src="weather.js"></script>
+        <style>
+          /* CSS for colors */
+:root {
+  --bg: #282a36;
+  --fg: #f8f8f2;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+  --border: #44475a;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+}
+
+/* TUI Block Style */
+.block {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  background-color: #1e1f29;
+}
+
+/* Hello */
+#hello {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+#hello h1 {
+  color: var(--orange);
+  margin: 0;
+}
+
+#hello h4 {
+  color: var(--purple);
+  margin: 0;
+}
+
+/* Clock */
+#clock {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--cyan);
+}
+
+/* Links*/
+#links {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 0.5rem;
+}
+
+#links a {
+  display: block;
+  background-color: #1e1f29;
+  color: var(--pink);
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+#links a:hover {
+  background-color: var(--border);
+  color: var(--yellow);
+}
+        </style>
+    </head>
+    <body class="body">
+      <!-- The Hello User block-->
+        <div class="block" id="hello">
+            <h1>Hello USER</h1>
+            <h4 id="weatherText">Loading weather...</h4>
+        </div>
+        <!-- The Clock block-->
+        <div class="block" id="clock"><span id="clock"></span></div>
+
+        <!-- The links block, modify them for your personnal shortcuts -->
+         <!-- The links create them per lines so if you want to sort ur links per colomn think about that-->
+   <div class="block" id="links">
+        <a href="https://drive.google.com/drive/home"> > drive</a>
+        <a href="https://www.github.com/"> > github</a>
+        <a href="https://www.youtube.com"> > youtube</a>
+        <a href="https://www.twitch.tv/"> > twitch</a>
+        <a href="https://0770920g.index-education.net/pronote/eleve.html"> > pronote</a>
+        <a href="https://discord.com/channels/@me"> > discord</a>
+        <a href="https://www.reddit.com/"> > reddit</a>
+        <a href="https://play.pokemonshowdown.com/"> > showdown</a>
+        <a href="https://www.canva.com/"> > canva</a>
+        <a href="https://chatgpt.com/"> > chatgpt</a>
+        <a href="https://www.netflix.com/browse"> > netflix</a>
+        <a href="https://mail.google.com/mail/u/0/#inbox"> > gmail</a>
+        <a href="https://www.lyceelafayette.fr/"> > lycée</a>        
+        <a href="https://developer.mozilla.org/fr/"> > mdn</a>      
+        <a href="https://anime-sama.fr/"> > anime</a>
+        <a href="https://archidekt.com/"> > archidekt</a>
+    </div>
+
+        
+    </body> 
+</html>
